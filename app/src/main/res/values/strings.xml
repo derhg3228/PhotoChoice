@@ -2,6 +2,7 @@
     <string name="app_name">PhotoChanger</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="facebook_app_id">2709545045926275</string> <string name="fb_login_protocol_scheme">fb2709545045926275</string>
+    <string name="facebook_app_id">2709545045926275</string>
+    <string name="fb_login_protocol_scheme">fb2709545045926275</string>
 
 </resources>

@@ -1,11 +1,15 @@
-package com.example.photochanger.ui
+package com.example.photochanger.ui.login
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.photochanger.R
 import com.example.photochanger.databinding.FragmentLoginBinding
 import com.example.photochanger.ui.common.BaseFragment
+import com.example.photochanger.ui.common.isProfileAuth
+import com.example.photochanger.ui.profile.ProfileFragment
+import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
@@ -25,6 +29,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
             object : FacebookCallback<LoginResult>{
                 override fun onSuccess(result: LoginResult?) {
                     Log.e("onSuccessFacebook", result!!.accessToken.toString())
+                    if (isProfileAuth()) openProfile()
                 }
 
                 override fun onCancel() {
@@ -42,5 +47,11 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         callbackManager.onActivityResult(requestCode, resultCode, data)
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    private fun openProfile(){
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.container, ProfileFragment())
+            .commit()
     }
 }
