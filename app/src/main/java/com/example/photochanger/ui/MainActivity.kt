@@ -1,8 +1,9 @@
-package com.example.photochanger
+package com.example.photochanger.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.photochanger.ui.common.isProfileAuth
+import com.example.photochanger.R
+import com.example.photochanger.isProfileAuth
 import com.example.photochanger.ui.login.LoginFragment
 import com.example.photochanger.ui.profile.ProfileFragment
 

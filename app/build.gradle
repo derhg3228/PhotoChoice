@@ -63,6 +63,7 @@ dependencies {
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.5.0"
 
     //Gson
     implementation 'com.google.code.gson:gson:2.8.7'
@@ -71,4 +72,11 @@ dependencies {
     def koin_version = "3.1.2"
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"
+
+    //RxJava
+    implementation "io.reactivex.rxjava2:rxjava:2.2.9"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+
+    //DelegateAdapters
+    implementation "com.github.Liverm0r:delegateadapters:4.0"
 }

@@ -7,9 +7,8 @@ import android.view.View
 import com.example.photochanger.R
 import com.example.photochanger.databinding.FragmentLoginBinding
 import com.example.photochanger.ui.common.BaseFragment
-import com.example.photochanger.ui.common.isProfileAuth
+import com.example.photochanger.isProfileAuth
 import com.example.photochanger.ui.profile.ProfileFragment
-import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
